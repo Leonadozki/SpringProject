@@ -3,6 +3,7 @@ package config;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
+import org.springframework.context.annotation.PropertySource;
 
 
 /**
@@ -12,8 +13,8 @@ import org.springframework.context.annotation.Import;
 
 @Configuration
 @ComponentScan("com.annoDemo")
-// 导入子配置类，逻辑较清晰一点
-@Import(JdbcConfig.class)
+@Import(JdbcConfig.class)       // 导入子配置类，逻辑较清晰一点
+@PropertySource("classpath:JdbcConfig.properties")
 public class SpringConfiguration {
 
     // 构造方法
