@@ -53,6 +53,7 @@ public class ResolveServiceImpl implements IResolveService{
      * 调用dao实现部分开始
      * */
     public List<Prob> findAllPro() {
+
         return data.findAllPro();
     }
 
