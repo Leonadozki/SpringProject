@@ -2,6 +2,7 @@ package com.annoDemo.service;
 
 import com.annoDemo.dao.IResolveDao;
 import com.annoDemo.domain.Prob;
+import com.annoDemo.utils.TransactionManager;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
@@ -49,27 +50,131 @@ public class ResolveServiceImpl implements IResolveService{
     @Resource(name = "resolveDao")
     private IResolveDao data;
 
+    @Resource(name = "transactionManager")
+    private TransactionManager tsManager;
+
     /**
-     * 调用dao实现部分开始
+     * --------------------------调用dao实现部分开始------------------------------------
      * */
     public List<Prob> findAllPro() {
-
-        return data.findAllPro();
+        try{
+            // 1.开启事务
+            tsManager.beginTransaction();
+            // 2.执行操作
+            List<Prob> probs = data.findAllPro();
+            // 3.提交事务
+            tsManager.commit();
+            // 4.返回结果
+            return probs;
+        }catch (Exception e){
+            // 5.回滚操作
+            tsManager.rollback();
+            throw new RuntimeException(e);
+        }finally {
+            // 6.释放连接
+            tsManager.release();
+        }
     }
 
     public Prob findPro(Integer id) {
-        return data.findPro(id);
+        try{
+            // 1.开启事务
+            tsManager.beginTransaction();
+            // 2.执行操作
+            Prob prob = data.findPro(id);
+            // 3.提交事务
+            tsManager.commit();
+            // 4.返回结果
+            return prob;
+        }catch (Exception e){
+            // 5.回滚操作
+            tsManager.rollback();
+            throw new RuntimeException(e);
+        }finally {
+            // 6.释放连接
+            tsManager.release();
+        }
+
     }
 
     public void savePro(Prob prob) {
-        data.savePro(prob);
+        try{
+            // 1.开启事务
+            tsManager.beginTransaction();
+            // 2.执行操作
+            data.savePro(prob);
+            // 3.提交事务
+            tsManager.commit();
+        }catch (Exception e){
+            // 4.回滚操作
+            tsManager.rollback();
+        }finally {
+            // 5.释放连接
+            tsManager.release();
+        }
     }
 
     public void updatePro(Prob prob) {
-        data.updatePro(prob);
+        try{
+            // 1.开启事务
+            tsManager.beginTransaction();
+            // 2.执行操作
+            data.updatePro(prob);
+            // 3.提交事务
+            tsManager.commit();
+        }catch (Exception e){
+            // 4.回滚操作
+            tsManager.rollback();
+        }finally {
+            // 5.释放连接
+            tsManager.release();
+        }
     }
 
     public void deletePro(Integer id) {
-        data.deletePro(id);
+        try{
+            // 1.开启事务
+            tsManager.beginTransaction();
+            // 2.执行操作
+            data.deletePro(id);
+            // 3.提交事务
+            tsManager.commit();
+        }catch (Exception e){
+            // 4.回滚操作
+            tsManager.rollback();
+        }finally {
+            // 5.释放连接
+            tsManager.release();
+        }
+
+    }
+
+    public void transfer(String sourceName, String targetName, Integer participants) {
+        try{
+            // 1.开启事务
+            tsManager.beginTransaction();
+            // 2.执行操作
+            // 2.1.根据名称查找源发布会数据
+            Prob source = data.findByName(sourceName);
+            // 2.2.根据名称查找目标发布会数据
+            Prob target = data.findByName(targetName);
+            // 2.3.修改源、目标发布会与会人数
+            source.setParticipant_num(source.getParticipant_num()+participants);
+            target.setParticipant_num((target.getParticipant_num()-participants));
+            // 2.4.更新数据
+            data.updatePro(source);
+            int i = 1/0;
+            data.updatePro(target);
+            // 3.提交事务
+            tsManager.commit();
+        }catch (Exception e){
+            // 5.回滚操作
+            tsManager.rollback();
+            e.printStackTrace();
+        }finally {
+            // 6.释放连接
+            tsManager.release();
+        }
+
     }
 }

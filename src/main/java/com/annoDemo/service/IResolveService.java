@@ -21,4 +21,8 @@ public interface IResolveService {
 
     // 删除问题
     void deletePro(Integer id);
+
+    //
+    void transfer(String sourceName, String targetName, Integer participants);
+
 }

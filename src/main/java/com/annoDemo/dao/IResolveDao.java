@@ -21,5 +21,8 @@ public interface IResolveDao {
      // 删除问题
      void deletePro(Integer id);
 
+     // 通过名称查找数据
+     Prob findByName(String name);
+
 
 }
