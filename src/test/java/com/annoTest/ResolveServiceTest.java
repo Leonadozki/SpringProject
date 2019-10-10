@@ -35,7 +35,7 @@ public class ResolveServiceTest {
     public void testFindOne(){
 
         Prob prob = is.findPro(2);
-        System.out.println(prob);
+
     }
 
     @Ignore
@@ -57,6 +57,5 @@ public class ResolveServiceTest {
     @Test
     public void testTransfer(){
         is.transfer("腾讯发布会", "小米新品发布会", 1);
-        System.out.println("testTransfer方法运行结束。");
     }
 }

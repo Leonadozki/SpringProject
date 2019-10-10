@@ -32,6 +32,7 @@ public class ResolveServiceImpl implements IResolveService{
     // 第二种注入bean类型数据方法,可直接指定bean的id
     @Resource(name = "resolveDao")
     private IResolveDao solved;
+
     public void resolveMathPro() {
         System.out.println(prob + " Done with ："+ algorithm +" result is "+ result);
         System.out.println(data);
@@ -93,6 +94,7 @@ public class ResolveServiceImpl implements IResolveService{
         }finally {
             // 6.释放连接
             tsManager.release();
+            System.out.println("findPro方法结束。");
         }
 
     }
@@ -163,7 +165,7 @@ public class ResolveServiceImpl implements IResolveService{
             target.setParticipant_num((target.getParticipant_num()-participants));
             // 2.4.更新数据
             data.updatePro(source);
-            int i = 1/0;
+//            int i = 1/0;
             data.updatePro(target);
             // 3.提交事务
             tsManager.commit();
@@ -174,6 +176,7 @@ public class ResolveServiceImpl implements IResolveService{
         }finally {
             // 6.释放连接
             tsManager.release();
+            System.out.println("transfer方法结束。");
         }
 
     }
