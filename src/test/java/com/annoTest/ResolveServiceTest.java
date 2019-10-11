@@ -25,10 +25,8 @@ public class ResolveServiceTest {
 
     @Test
     public void testFindAll(){
-        List<Prob> probs = is.findAllPro();
-        for (Prob prob: probs) {
-            System.out.println(prob);
-        }
+        is.findAllPro();
+
     }
 
     @Test

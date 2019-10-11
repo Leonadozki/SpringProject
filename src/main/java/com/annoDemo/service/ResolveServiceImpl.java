@@ -58,104 +58,48 @@ public class ResolveServiceImpl implements IResolveService{
      * --------------------------调用dao实现部分开始------------------------------------
      * */
     public List<Prob> findAllPro() {
-        try{
-            // 1.开启事务
-            tsManager.beginTransaction();
-            // 2.执行操作
-            List<Prob> probs = data.findAllPro();
-            // 3.提交事务
-            tsManager.commit();
-            // 4.返回结果
-            return probs;
-        }catch (Exception e){
-            // 5.回滚操作
-            tsManager.rollback();
-            throw new RuntimeException(e);
-        }finally {
-            // 6.释放连接
-            tsManager.release();
+
+        List<Prob> probs = data.findAllPro();
+
+        for (Prob prob : probs) {
+            System.out.println(prob);
         }
+
+        return probs;
+
     }
 
     public Prob findPro(Integer id) {
-        try{
-            // 1.开启事务
-            tsManager.beginTransaction();
-            // 2.执行操作
-            Prob prob = data.findPro(id);
-            // 3.提交事务
-            tsManager.commit();
-            // 4.返回结果
-            return prob;
-        }catch (Exception e){
-            // 5.回滚操作
-            tsManager.rollback();
-            throw new RuntimeException(e);
-        }finally {
-            // 6.释放连接
-            tsManager.release();
-            System.out.println("findPro方法结束。");
-        }
+
+        Prob prob = data.findPro(id);
+
+        System.out.println("findPro方法结束。");
+
+        return prob;
+
 
     }
 
     public void savePro(Prob prob) {
-        try{
-            // 1.开启事务
-            tsManager.beginTransaction();
-            // 2.执行操作
-            data.savePro(prob);
-            // 3.提交事务
-            tsManager.commit();
-        }catch (Exception e){
-            // 4.回滚操作
-            tsManager.rollback();
-        }finally {
-            // 5.释放连接
-            tsManager.release();
-        }
+
+        data.savePro(prob);
+
     }
 
     public void updatePro(Prob prob) {
-        try{
-            // 1.开启事务
-            tsManager.beginTransaction();
-            // 2.执行操作
-            data.updatePro(prob);
-            // 3.提交事务
-            tsManager.commit();
-        }catch (Exception e){
-            // 4.回滚操作
-            tsManager.rollback();
-        }finally {
-            // 5.释放连接
-            tsManager.release();
-        }
+
+        data.updatePro(prob);
+
     }
 
     public void deletePro(Integer id) {
-        try{
-            // 1.开启事务
-            tsManager.beginTransaction();
-            // 2.执行操作
-            data.deletePro(id);
-            // 3.提交事务
-            tsManager.commit();
-        }catch (Exception e){
-            // 4.回滚操作
-            tsManager.rollback();
-        }finally {
-            // 5.释放连接
-            tsManager.release();
-        }
+
+        data.deletePro(id);
 
     }
 
     public void transfer(String sourceName, String targetName, Integer participants) {
-        try{
-            // 1.开启事务
-            tsManager.beginTransaction();
-            // 2.执行操作
+
             // 2.1.根据名称查找源发布会数据
             Prob source = data.findByName(sourceName);
             // 2.2.根据名称查找目标发布会数据
@@ -167,17 +111,8 @@ public class ResolveServiceImpl implements IResolveService{
             data.updatePro(source);
 //            int i = 1/0;
             data.updatePro(target);
-            // 3.提交事务
-            tsManager.commit();
-        }catch (Exception e){
-            // 5.回滚操作
-            tsManager.rollback();
-            e.printStackTrace();
-        }finally {
-            // 6.释放连接
-            tsManager.release();
+
             System.out.println("transfer方法结束。");
-        }
 
     }
 }
