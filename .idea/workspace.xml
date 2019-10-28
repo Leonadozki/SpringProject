@@ -3,13 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="442bae0e-b2d1-4048-8080-51d717d0ead9" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/config/JdbcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/config/JdbcConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/config/SpringConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/config/SpringConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/annoTest/ResolveServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/annoTest/ResolveServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/annoDemo/service/ResolveServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/annoDemo/service/ResolveServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/config/SpringConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config/SpringConfiguration.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/annoTest/ResolveServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/annoTest/ResolveServiceTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/annoDemo/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/annoDemo/domain/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SqlMapperConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/SqlMapperConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com.annoDemo/dao/IUserDao.xml" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,9 +17,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="yet_unknown" />
-        <option value="Class" />
         <option value="Interface" />
         <option value="spring-beans.schema" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -56,6 +52,9 @@
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\anno_test01_demo\src\main\resources\com\annoDemo\dao" />
+      <recent name="D:\anno_test01_demo\src\main\resources" />
+      <recent name="D:\anno_test01_demo\src\main\resources\com" />
       <recent name="D:\anno_test01_demo\src\main\resources\com.annoDemo" />
       <recent name="D:\anno_test01_demo\src\main\resources\com.annoDemo\dao" />
     </key>
@@ -72,7 +71,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ResolveServiceTest">
+  <component name="RunManager" selected="Application.MybatisTest">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -83,6 +82,20 @@
       <option name="MAIN_CLASS_NAME" value="com.annoTest.AopTest" />
       <module name="anno_test01_demo" />
       <option name="WORKING_DIRECTORY" value="file://$MODULE_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.annoTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MybatisTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.annoTest.MybatisTest" />
+      <module name="anno_test01_demo" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.annoTest.*" />
@@ -203,9 +216,11 @@
       <item itemvalue="JUnit.ResolveServiceTest.testFindOne" />
       <item itemvalue="JUnit.QueryRunnerTest.runnerTest" />
       <item itemvalue="JUnit.ResolveServiceTest" />
+      <item itemvalue="Application.MybatisTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MybatisTest" />
         <item itemvalue="JUnit.ResolveServiceTest" />
         <item itemvalue="JUnit.QueryRunnerTest.runnerTest" />
         <item itemvalue="JUnit.ResolveServiceTest.testFindOne" />
@@ -248,7 +263,7 @@
       <workItem from="1571836465741" duration="588000" />
       <workItem from="1571921787264" duration="989000" />
       <workItem from="1572007662044" duration="740000" />
-      <workItem from="1572268846374" duration="3441000" />
+      <workItem from="1572268846374" duration="6268000" />
     </task>
     <servers />
   </component>

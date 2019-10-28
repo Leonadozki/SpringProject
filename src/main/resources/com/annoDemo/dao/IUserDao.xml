@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--持久层接口名-->
+<mapper namespace="com.annoDemo.dao.IUserDao" >
+    <!-- 此处放置sql语句   -->
+    <select id="findAll" resultType="com.annoDemo.domain.User">
+        select * from user
+    </select>
+</mapper>

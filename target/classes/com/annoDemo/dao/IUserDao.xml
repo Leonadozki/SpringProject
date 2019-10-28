@@ -4,9 +4,9 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <!--持久层接口名-->
-<mapper namespace="com.annoDemo.dao.IUserDao">
+<mapper namespace="com.annoDemo.dao.IUserDao" >
     <!-- 此处放置sql语句   -->
-    <select id="findAll">
-        select * from user;
+    <select id="findAll" resultType="com.annoDemo.domain.User">
+        select * from user
     </select>
 </mapper>
