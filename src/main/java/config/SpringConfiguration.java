@@ -1,6 +1,7 @@
 package config;
 
 import org.springframework.context.annotation.*;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 
 /**
@@ -10,9 +11,10 @@ import org.springframework.context.annotation.*;
 
 @Configuration
 @ComponentScan("com.annoDemo")
-@Import(JdbcConfig.class)       // 导入子配置类，逻辑较清晰一点
+@Import({JdbcConfig.class, TransactionConfig.class})       // 导入子配置类，逻辑较清晰一点
 @PropertySource("classpath:JdbcConfig.properties")
 @EnableAspectJAutoProxy        // 开启aop注解
+//@EnableTransactionManagement   // 开启事务支持注解
 public class SpringConfiguration {
 
     // 构造方法

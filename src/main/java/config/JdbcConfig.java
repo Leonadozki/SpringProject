@@ -28,7 +28,7 @@ public class JdbcConfig {
     /**
      * 创建QueryRunner对象
      * */
-    @Bean("runner")
+    @Bean("runner")    //注册到IOC容器
     @Scope("prototype")
     public QueryRunner createQueryRunner(DataSource dataSource){
         return new QueryRunner(dataSource);
@@ -37,7 +37,7 @@ public class JdbcConfig {
     /**
      * 创建数据源对象
      */
-    @Bean("dataSource")
+    @Bean("dataSource")   //注册到IOC容器
     public DataSource createDataSource(){
         try {
             // 创建c3p0连接池
