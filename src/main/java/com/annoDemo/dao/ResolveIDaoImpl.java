@@ -10,7 +10,12 @@ import javax.annotation.Resource;
 import java.sql.SQLException;
 import java.util.List;
 
-// 把这个类对象存入SpringIoc容器，用repository区分是持久层对象
+
+/**
+ *  把这个类对象存入SpringIoc容器，用repository区分是持久层对象
+ *
+ *  这是一个手动事务控制加dbutils使用案例
+ */
 @Repository("resolveDao")
 public class ResolveIDaoImpl implements IResolveDao {
 

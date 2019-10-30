@@ -2,31 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="442bae0e-b2d1-4048-8080-51d717d0ead9" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.classpath" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/annoDemo/dao/IUserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/annoDemo/dao/IUserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.project" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/annoDemo/dao/ResolveIDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/annoDemo/dao/ResolveIDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/SqlMapperConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/SqlMapperConfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/annoDemo/dao/IUserDao.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/annoTest/MybatisTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/annoTest/MybatisTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SqlMapperConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SqlMapperConfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/annoDemo/dao/IResolveDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/annoDemo/dao/IResolveDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/annoDemo/dao/IUserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/annoDemo/dao/IUserDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/annoDemo/dao/IUserDao.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/annoDemo/dao/ResolveIDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/annoDemo/dao/ResolveIDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/annoDemo/domain/Prob.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/annoDemo/domain/Prob.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/annoDemo/domain/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/annoDemo/domain/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/annoDemo/service/IResolveService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/annoDemo/service/IResolveService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/annoDemo/service/ResolveServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/annoDemo/service/ResolveServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/annoDemo/ui/UiImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/annoDemo/ui/UiImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/annoDemo/utils/ConnectionUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/annoDemo/utils/ConnectionUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/annoDemo/utils/Logger.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/annoDemo/utils/Logger.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/annoDemo/utils/TransactionManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/annoDemo/utils/TransactionManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/config/JDBCConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config/JDBCConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/config/SpringConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config/SpringConfiguration.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/config/TransactionConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config/TransactionConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/annoTest/MybatisTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/annoTest/MybatisTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/annoTest/QueryRunnerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/annoTest/QueryRunnerTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/annoTest/ResolveServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/annoTest/ResolveServiceTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/config/SpringConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/config/SpringConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/annoTest/MybatisJunitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/annoTest/MybatisJunitTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -259,8 +240,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.MybatisJunitTest" />
-        <item itemvalue="Application.MybatisTest" />
         <item itemvalue="JUnit.ResolveServiceTest" />
+        <item itemvalue="Application.MybatisTest" />
         <item itemvalue="JUnit.QueryRunnerTest.runnerTest" />
         <item itemvalue="JUnit.ResolveServiceTest.testFindOne" />
       </list>
@@ -304,7 +285,7 @@
       <workItem from="1572007662044" duration="740000" />
       <workItem from="1572268846374" duration="6423000" />
       <workItem from="1572355872244" duration="2133000" />
-      <workItem from="1572438019568" duration="3608000" />
+      <workItem from="1572438019568" duration="4342000" />
     </task>
     <servers />
   </component>
