@@ -1,8 +1,10 @@
 package com.annoDemo.dao;
 
 import com.annoDemo.domain.User;
+import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.Update;
 
 import java.util.List;
 
@@ -22,4 +24,18 @@ public interface IUserDao {
      * */
     @Insert("insert into user(username,birthday,sex,address) values(#{username},#{birthday},#{sex},#{address})")
     void saveUser(User user);
+
+
+    /**
+     *  修改用户方法
+     */
+    @Update("update user set username=#{username}, birthday=#{birthday}, sex=#{sex}, address=#{address} where id=#{id}")
+    void updateUser(User user);
+
+
+    /**
+     *  删除用户方法
+     */
+    @Delete("delete from user where id=#{id}")
+    void removeUser(Integer id);
 }

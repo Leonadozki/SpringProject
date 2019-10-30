@@ -15,6 +15,10 @@ import java.util.Date;
 import java.util.List;
 
 
+/**
+ *  dao层单元测试类
+ *  注意： 单元测试应使用assert自动测试验证，避免人肉验证测试，以实现定时运行和代码修改提交后自动运行
+ */
 public class MybatisJunitTest {
 
     // 定义全局变量让测试类也能用
@@ -72,6 +76,40 @@ public class MybatisJunitTest {
     @Test
     public void testListAll(){
 
+        List<User> users = userDao.listAll();
+        for (User user : users) {
+            System.out.println(user);
+        }
+    }
+
+
+    /**
+     *  修改user方法
+     */
+    @Test
+    public void testUpdateUser(){
+
+        User user = new User();
+        user.setId(41);
+        user.setUsername("老王改");
+        user.setSex("女");
+        user.setBirthday(new Date());
+        user.setAddress("南岸区弹子石2");
+        userDao.updateUser(user);
+        List<User> users = userDao.listAll();
+        for (User user1 : users) {
+            System.out.println(user1);
+        }
+    }
+
+    /**
+     * 删除user方法
+     */
+    @Test
+    public void testDeleteUser(){
+
+        Integer id = 48;
+        userDao.removeUser(id);
         List<User> users = userDao.listAll();
         for (User user : users) {
             System.out.println(user);
