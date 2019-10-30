@@ -1,6 +1,8 @@
 package com.annoDemo.dao;
 
 import com.annoDemo.domain.User;
+import org.apache.ibatis.annotations.Insert;
+import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
 
@@ -12,5 +14,12 @@ public interface IUserDao {
     /**
      *  查询所有用户方法
      * */
-    List<User> findAll();
+    @Select("select * from user")
+    List<User> listAll();
+
+    /**
+     *  保存用户方法
+     * */
+    @Insert("insert into user(username,birthday,sex,address) values(#{username},#{birthday},#{sex},#{address})")
+    void saveUser(User user);
 }

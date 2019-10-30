@@ -23,7 +23,14 @@
         </environment>
     </environments>
 
+    <!--  mybatis注解模式   -->
     <mappers>
-        <mapper resource="com/annoDemo/dao/IUserDao.xml" />
+        <mapper class="com.annoDemo.dao.IUserDao" />
     </mappers>
+
+
+<!--  mybatis mapper xml配置模式  -->
+<!--    <mappers>-->
+<!--        <mapper resource="com/annoDemo/dao/IUserDao.xml" />-->
+<!--    </mappers>-->
 </configuration>

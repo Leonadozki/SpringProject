@@ -3,9 +3,30 @@
   <component name="ChangeListManager">
     <list default="true" id="442bae0e-b2d1-4048-8080-51d717d0ead9" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/annoDemo/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/annoDemo/domain/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/annoDemo/dao/IUserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/annoDemo/dao/IUserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/annoDemo/dao/ResolveIDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/annoDemo/dao/ResolveIDaoImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/SqlMapperConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/SqlMapperConfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com.annoDemo/dao/IUserDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/annoDemo/dao/IUserDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/annoTest/MybatisTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/annoTest/MybatisTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SqlMapperConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SqlMapperConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/annoDemo/dao/IResolveDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/annoDemo/dao/IResolveDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/annoDemo/dao/IUserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/annoDemo/dao/IUserDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/annoDemo/dao/IUserDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/annoDemo/dao/ResolveIDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/annoDemo/dao/ResolveIDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/annoDemo/domain/Prob.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/annoDemo/domain/Prob.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/annoDemo/domain/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/annoDemo/domain/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/annoDemo/service/IResolveService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/annoDemo/service/IResolveService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/annoDemo/service/ResolveServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/annoDemo/service/ResolveServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/annoDemo/ui/UiImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/annoDemo/ui/UiImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/annoDemo/utils/ConnectionUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/annoDemo/utils/ConnectionUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/annoDemo/utils/Logger.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/annoDemo/utils/Logger.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/annoDemo/utils/TransactionManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/annoDemo/utils/TransactionManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/config/JDBCConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config/JDBCConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/config/SpringConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config/SpringConfiguration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/config/TransactionConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config/TransactionConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/annoTest/MybatisTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/annoTest/MybatisTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/annoTest/QueryRunnerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/annoTest/QueryRunnerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/annoTest/ResolveServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/annoTest/ResolveServiceTest.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -71,7 +92,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.MybatisTest">
+  <component name="RunManager" selected="JUnit.MybatisJunitTest">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -122,6 +143,22 @@
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MybatisJunitTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="anno_test01_demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.annoTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.annoTest" />
+      <option name="MAIN_CLASS_NAME" value="com.annoTest.MybatisJunitTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -212,14 +249,16 @@
     <list>
       <item itemvalue="Application.AopTest" />
       <item itemvalue="Application.UiImpl" />
+      <item itemvalue="Application.MybatisTest" />
       <item itemvalue="JUnit.ResolveServiceTest.testFindAll" />
       <item itemvalue="JUnit.ResolveServiceTest.testFindOne" />
       <item itemvalue="JUnit.QueryRunnerTest.runnerTest" />
       <item itemvalue="JUnit.ResolveServiceTest" />
-      <item itemvalue="Application.MybatisTest" />
+      <item itemvalue="JUnit.MybatisJunitTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MybatisJunitTest" />
         <item itemvalue="Application.MybatisTest" />
         <item itemvalue="JUnit.ResolveServiceTest" />
         <item itemvalue="JUnit.QueryRunnerTest.runnerTest" />
@@ -263,41 +302,11 @@
       <workItem from="1571836465741" duration="588000" />
       <workItem from="1571921787264" duration="989000" />
       <workItem from="1572007662044" duration="740000" />
-      <workItem from="1572268846374" duration="6268000" />
+      <workItem from="1572268846374" duration="6423000" />
+      <workItem from="1572355872244" duration="2133000" />
+      <workItem from="1572438019568" duration="3608000" />
     </task>
     <servers />
-  </component>
-  <component name="TestHistory">
-    <history-entry file="ResolveServiceTest - 2019.10.10 at 23h 02m 39s.xml">
-      <configuration name="ResolveServiceTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ResolveServiceTest - 2019.10.10 at 23h 13m 18s.xml">
-      <configuration name="ResolveServiceTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ResolveServiceTest - 2019.10.10 at 23h 43m 35s.xml">
-      <configuration name="ResolveServiceTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ResolveServiceTest - 2019.10.10 at 23h 50m 46s.xml">
-      <configuration name="ResolveServiceTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ResolveServiceTest - 2019.10.11 at 21h 47m 09s.xml">
-      <configuration name="ResolveServiceTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ResolveServiceTest - 2019.10.11 at 21h 49m 09s.xml">
-      <configuration name="ResolveServiceTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ResolveServiceTest - 2019.10.13 at 01h 26m 17s.xml">
-      <configuration name="ResolveServiceTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ResolveServiceTest - 2019.10.13 at 01h 31m 18s.xml">
-      <configuration name="ResolveServiceTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ResolveServiceTest - 2019.10.13 at 01h 50m 00s.xml">
-      <configuration name="ResolveServiceTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ResolveServiceTest - 2019.10.13 at 01h 55m 16s.xml">
-      <configuration name="ResolveServiceTest" configurationId="JUnit" />
-    </history-entry>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />

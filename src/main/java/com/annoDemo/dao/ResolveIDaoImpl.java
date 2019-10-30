@@ -29,6 +29,7 @@ public class ResolveIDaoImpl implements IResolveDao {
         }
     }
 
+
     public Prob findPro(Integer id) {
         try {
             return runner.query(connectionUtils.getThreadConnection(),"select * from sign_event where id = ?", new BeanHandler<Prob>(Prob.class), id);
