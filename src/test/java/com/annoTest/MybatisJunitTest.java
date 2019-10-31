@@ -75,7 +75,6 @@ public class MybatisJunitTest {
      */
     @Test
     public void testListAll(){
-
         List<User> users = userDao.listAll();
         for (User user : users) {
             System.out.println(user);
@@ -88,7 +87,6 @@ public class MybatisJunitTest {
      */
     @Test
     public void testUpdateUser(){
-
         User user = new User();
         user.setId(41);
         user.setUsername("老王改");
@@ -107,10 +105,35 @@ public class MybatisJunitTest {
      */
     @Test
     public void testDeleteUser(){
-
         Integer id = 48;
         userDao.removeUser(id);
         List<User> users = userDao.listAll();
+        for (User user : users) {
+            System.out.println(user);
+        }
+    }
+
+    /**
+     *  通过ID查找单个user
+     */
+    @Test
+    public void testGetUser(){
+        Integer id= 46;
+        User user = userDao.getById(id);
+        if (user!=null){
+            System.out.println("testGetUser() 方法执行成功");
+        }else{
+            System.out.println("testGetUser() 方法执行失败，未找到数据");
+        }
+    }
+
+    /**
+     *  通过名称模糊搜索
+     */
+    @Test
+    public void testGetByName(){
+        String name = "王";
+        List<User> users = userDao.listByName(name);
         for (User user : users) {
             System.out.println(user);
         }

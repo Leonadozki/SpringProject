@@ -38,4 +38,16 @@ public interface IUserDao {
      */
     @Delete("delete from user where id=#{id}")
     void removeUser(Integer id);
+
+    /**
+     *  查询单个用户
+     */
+    @Select("select * from user where id=#{id}")
+    User getById(Integer id);
+
+    /**
+     *  按名称模糊查询
+     */
+    @Select("select * from user where username like CONCAT('%', #{name}, '%') ")
+    List<User> listByName(String name);
 }
