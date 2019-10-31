@@ -139,4 +139,13 @@ public class MybatisJunitTest {
         }
     }
 
+    /**
+     *  返回所有user记录个数
+     */
+    @Test
+    public void testGetTotalUserNumbers(){
+        Integer userNumber = userDao.getTotalUserNumbers();
+        System.out.println("记录个数： " + userNumber);
+    }
+
 }

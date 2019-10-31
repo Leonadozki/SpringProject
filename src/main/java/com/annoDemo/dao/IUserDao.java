@@ -50,4 +50,10 @@ public interface IUserDao {
      */
     @Select("select * from user where username like CONCAT('%', #{name}, '%') ")
     List<User> listByName(String name);
+
+    /**
+     * @return 所有user记录个数
+     */
+    @Select("select count(*) from user")
+    Integer getTotalUserNumbers();
 }
