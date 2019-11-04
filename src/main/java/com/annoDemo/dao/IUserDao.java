@@ -1,5 +1,6 @@
 package com.annoDemo.dao;
 
+import com.annoDemo.domain.QueryVo;
 import com.annoDemo.domain.User;
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
@@ -56,4 +57,12 @@ public interface IUserDao {
      */
     @Select("select count(*) from user")
     Integer getTotalUserNumbers();
+
+
+    /**
+     * @param vo
+     * @return 根据QueryVo条件查询User
+     */
+    @Select("select * from user where username like CONCAT('%',#{user.username},'%')")
+    List<User> listUserByVo(QueryVo vo);
 }

@@ -1,6 +1,7 @@
 package com.annoTest;
 
 import com.annoDemo.dao.IUserDao;
+import com.annoDemo.domain.QueryVo;
 import com.annoDemo.domain.User;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
@@ -146,6 +147,21 @@ public class MybatisJunitTest {
     public void testGetTotalUserNumbers(){
         Integer userNumber = userDao.getTotalUserNumbers();
         System.out.println("记录个数： " + userNumber);
+    }
+
+    /**
+     *  根据Vo模糊查询
+     */
+    @Test
+    public void testListByQueryVo(){
+        QueryVo vo = new QueryVo();
+        User user = new User();
+        user.setUsername("王");
+        vo.setUser(user);
+        List<User> users = userDao.listUserByVo(vo);
+        for (User u : users) {
+            System.out.println(u);
+        }
     }
 
 }

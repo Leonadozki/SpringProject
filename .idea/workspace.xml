@@ -2,9 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="442bae0e-b2d1-4048-8080-51d717d0ead9" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/annoDemo/domain/QueryVo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/annoDemo/dao/IUserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/annoDemo/dao/IUserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/JdbcConfig.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/JdbcConfig.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SqlMapperConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/SqlMapperConfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/annoTest/MybatisJunitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/annoTest/MybatisJunitTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/JdbcConfig.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/JdbcConfig.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SqlMapperConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SqlMapperConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/annoDemo/dao/IResolveDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/annoDemo/dao/IResolveDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/annoDemo/dao/IUserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/annoDemo/dao/IUserDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/annoDemo/domain/Prob.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/annoDemo/domain/Prob.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/annoDemo/domain/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/annoDemo/domain/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/annoDemo/service/IResolveService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/annoDemo/service/IResolveService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/annoDemo/service/ResolveServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/annoDemo/service/ResolveServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/annoDemo/ui/UiImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/annoDemo/ui/UiImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/annoDemo/utils/ConnectionUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/annoDemo/utils/ConnectionUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/annoDemo/utils/Logger.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/annoDemo/utils/Logger.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/annoDemo/utils/TransactionManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/annoDemo/utils/TransactionManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/config/JDBCConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config/JDBCConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/config/TransactionConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config/TransactionConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/annoTest/MybatisJunitTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/annoTest/MybatisJunitTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/annoTest/QueryRunnerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/annoTest/QueryRunnerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/annoTest/ResolveServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/annoTest/ResolveServiceTest.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,9 +47,15 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\maven-repository" />
+      </MavenGeneralSettings>
+    </option>
     <option name="importingSettings">
       <MavenImportingSettings>
         <option name="importAutomatically" value="true" />
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
       </MavenImportingSettings>
     </option>
   </component>
@@ -38,13 +64,13 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../javaUtils" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -70,7 +96,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.MybatisJunitTest">
+  <component name="RunManager" selected="JUnit.MybatisJunitTest.testListByQueryVo">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -141,6 +167,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MybatisJunitTest.testListByQueryVo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="anno_test01_demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.annoTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.annoTest" />
+      <option name="MAIN_CLASS_NAME" value="com.annoTest.MybatisJunitTest" />
+      <option name="METHOD_NAME" value="testListByQueryVo" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="QueryRunnerTest.runnerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="anno_test01_demo" />
       <extension name="coverage">
@@ -191,23 +234,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ResolveServiceTest.testFindOne" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="anno_test01_demo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.annoTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.annoTest" />
-      <option name="MAIN_CLASS_NAME" value="com.annoTest.ResolveServiceTest" />
-      <option name="METHOD_NAME" value="testFindOne" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -229,18 +255,18 @@
       <item itemvalue="Application.UiImpl" />
       <item itemvalue="Application.MybatisTest" />
       <item itemvalue="JUnit.ResolveServiceTest.testFindAll" />
-      <item itemvalue="JUnit.ResolveServiceTest.testFindOne" />
       <item itemvalue="JUnit.QueryRunnerTest.runnerTest" />
       <item itemvalue="JUnit.ResolveServiceTest" />
       <item itemvalue="JUnit.MybatisJunitTest" />
+      <item itemvalue="JUnit.MybatisJunitTest.testListByQueryVo" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MybatisJunitTest.testListByQueryVo" />
         <item itemvalue="JUnit.MybatisJunitTest" />
         <item itemvalue="JUnit.ResolveServiceTest" />
         <item itemvalue="Application.MybatisTest" />
         <item itemvalue="JUnit.QueryRunnerTest.runnerTest" />
-        <item itemvalue="JUnit.ResolveServiceTest.testFindOne" />
       </list>
     </recent_temporary>
   </component>
@@ -283,7 +309,12 @@
       <workItem from="1572268846374" duration="6423000" />
       <workItem from="1572355872244" duration="2133000" />
       <workItem from="1572438019568" duration="7234000" />
-      <workItem from="1572526588841" duration="6596000" />
+      <workItem from="1572526588841" duration="7237000" />
+      <workItem from="1572540852416" duration="64000" />
+      <workItem from="1572661697381" duration="8039000" />
+      <workItem from="1572788394757" duration="984000" />
+      <workItem from="1572790151521" duration="2697000" />
+      <workItem from="1572870114029" duration="5683000" />
     </task>
     <servers />
   </component>
