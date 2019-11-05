@@ -2,29 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="442bae0e-b2d1-4048-8080-51d717d0ead9" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/annoDemo/domain/QueryVo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/annoDemo/dao/IUserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/annoDemo/dao/IUserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/JdbcConfig.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/JdbcConfig.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/SqlMapperConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/SqlMapperConfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/annoTest/MybatisJunitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/annoTest/MybatisJunitTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/JdbcConfig.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/JdbcConfig.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/SqlMapperConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SqlMapperConfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/annoDemo/dao/IResolveDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/annoDemo/dao/IResolveDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/annoDemo/dao/IUserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/annoDemo/dao/IUserDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/annoDemo/domain/Prob.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/annoDemo/domain/Prob.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/annoDemo/domain/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/annoDemo/domain/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/annoDemo/service/IResolveService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/annoDemo/service/IResolveService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/annoDemo/service/ResolveServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/annoDemo/service/ResolveServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/annoDemo/ui/UiImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/annoDemo/ui/UiImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/annoDemo/utils/ConnectionUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/annoDemo/utils/ConnectionUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/annoDemo/utils/Logger.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/annoDemo/utils/Logger.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/annoDemo/utils/TransactionManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/annoDemo/utils/TransactionManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/config/JDBCConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config/JDBCConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/config/TransactionConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config/TransactionConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/annoTest/MybatisJunitTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/annoTest/MybatisJunitTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/annoTest/QueryRunnerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/annoTest/QueryRunnerTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/annoTest/ResolveServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/annoTest/ResolveServiceTest.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -60,7 +40,9 @@
     </option>
   </component>
   <component name="ProjectId" id="1SCYopa9D5PHH80Ur3ZMWYnsmZS" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -96,7 +78,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.MybatisJunitTest.testListByQueryVo">
+  <component name="RunManager" selected="JUnit.AccountTest.testListAccounts">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -151,6 +133,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AccountTest.testListAccounts" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="anno_test01_demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.annoTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.annoTest" />
+      <option name="MAIN_CLASS_NAME" value="com.annoTest.AccountTest" />
+      <option name="METHOD_NAME" value="testListAccounts" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MybatisJunitTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="anno_test01_demo" />
       <extension name="coverage">
@@ -178,23 +177,6 @@
       <option name="PACKAGE_NAME" value="com.annoTest" />
       <option name="MAIN_CLASS_NAME" value="com.annoTest.MybatisJunitTest" />
       <option name="METHOD_NAME" value="testListByQueryVo" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="QueryRunnerTest.runnerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="anno_test01_demo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.annoTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.annoTest" />
-      <option name="MAIN_CLASS_NAME" value="com.annoTest.QueryRunnerTest" />
-      <option name="METHOD_NAME" value="runnerTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
@@ -255,18 +237,18 @@
       <item itemvalue="Application.UiImpl" />
       <item itemvalue="Application.MybatisTest" />
       <item itemvalue="JUnit.ResolveServiceTest.testFindAll" />
-      <item itemvalue="JUnit.QueryRunnerTest.runnerTest" />
       <item itemvalue="JUnit.ResolveServiceTest" />
       <item itemvalue="JUnit.MybatisJunitTest" />
       <item itemvalue="JUnit.MybatisJunitTest.testListByQueryVo" />
+      <item itemvalue="JUnit.AccountTest.testListAccounts" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AccountTest.testListAccounts" />
         <item itemvalue="JUnit.MybatisJunitTest.testListByQueryVo" />
         <item itemvalue="JUnit.MybatisJunitTest" />
         <item itemvalue="JUnit.ResolveServiceTest" />
         <item itemvalue="Application.MybatisTest" />
-        <item itemvalue="JUnit.QueryRunnerTest.runnerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -314,7 +296,8 @@
       <workItem from="1572661697381" duration="8039000" />
       <workItem from="1572788394757" duration="984000" />
       <workItem from="1572790151521" duration="2697000" />
-      <workItem from="1572870114029" duration="5683000" />
+      <workItem from="1572870114029" duration="6294000" />
+      <workItem from="1572959280119" duration="2478000" />
     </task>
     <servers />
   </component>

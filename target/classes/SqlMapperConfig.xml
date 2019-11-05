@@ -26,14 +26,17 @@
         </environment>
     </environments>
 
-    <!--  mybatis注解模式   -->
+
     <mappers>
+        <!--  mybatis注解模式   -->
         <mapper class="com.annoDemo.dao.IUserDao" />
+
+        <!--  mybatis mapper xml配置模式  -->
+        <!--   坑：使用mapper的xml配置查询语句，文件路径记得是/间隔     -->
+        <mapper resource="com/annoDemo/dao/IAccountDao.xml"/>
     </mappers>
 
 
-<!--  mybatis mapper xml配置模式  -->
-<!--    <mappers>-->
-<!--        <mapper resource="com/annoDemo/dao/IUserDao.xml" />-->
-<!--    </mappers>-->
+
+
 </configuration>
