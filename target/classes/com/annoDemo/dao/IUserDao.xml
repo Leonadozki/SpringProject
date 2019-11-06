@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 配置对应dao接口 -->
+<mapper namespace="com.annoDemo.dao.IUserDao">
+
+    <resultMap id="userAccountsMap" type="user">
+        <id property="id" column="id" />
+        <result property="username" column="username" />
+        <result property="sex" column="sex" />
+        <result property="birthday" column="birthday" />
+        <result property="address" column="address" />
+        <!--  从表集合数据映射      -->
+        <collection property="accounts" ofType="account">
+            <!--    展示的id不能重复，起了个别名        -->
+            <id property="id" column="aid" />
+            <result property="uid" column="uid" />
+            <result property="money" column="money" />
+        </collection>
+
+    </resultMap>
+
+    <select id="listAll" resultMap="userAccountsMap" >
+        select *,a.id as aid from user u left join account a on u.id = a.uid;
+    </select>
+</mapper>

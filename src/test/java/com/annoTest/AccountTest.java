@@ -1,7 +1,9 @@
 package com.annoTest;
 
 import com.annoDemo.dao.IAccountDao;
+import com.annoDemo.dao.IUserDao;
 import com.annoDemo.domain.Account;
+import com.annoDemo.domain.User;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -19,6 +21,7 @@ public class AccountTest {
     private SqlSession session;
     private InputStream in;
     private IAccountDao accountDao;
+    private IUserDao userDao;
 
     @Before
     public void init() throws IOException {
@@ -27,6 +30,7 @@ public class AccountTest {
         SqlSessionFactory factory = builder.build(in);
         session = factory.openSession();
         accountDao = session.getMapper(IAccountDao.class);
+        userDao = session.getMapper(IUserDao.class);
 
     }
 
@@ -36,13 +40,29 @@ public class AccountTest {
         in.close();
     }
 
+    /**
+     *  一对一数据查询操作
+     */
     @Test
     public void testListAccounts() {
         List<Account> accounts = accountDao.listAccounts();
         for (Account account:accounts){
-            System.out.println("------------------");
+            System.out.println("---------------");
             System.out.println(account);
             System.out.println(account.getUser());
+        }
+    }
+
+    /**
+     *  用户--账户一对多查询操作
+     */
+    @Test
+    public void testListUserAccounts(){
+        List<User> users = userDao.listAll();
+        for (User user:users){
+            System.out.println("----------------");
+            System.out.println(user);
+            System.out.println(user.getAccounts());
         }
     }
 }
