@@ -5,7 +5,7 @@ import com.annoDemo.domain.Account;
 import java.util.List;
 
 /**
- *  账户dao接口类
+ *  账户dao接口类( XML方式配置 )
  */
 public interface IAccountDao {
 

@@ -10,6 +10,12 @@
     <!-- 从外部配置文件读连接信息   -->
     <properties resource="JdbcConfig.properties"></properties>
 
+    <!-- 配置别名    -->
+    <typeAliases>
+        <!--   配置实体类的别名，mapper内可以不写实体类全类型，别名默认为类名      -->
+        <package name="com.annoDemo.domain"/>
+    </typeAliases>
+    
     <!--    配置id为mysql的环境配置-->
     <environments default="mysql">
         <environment id="mysql">
@@ -28,12 +34,16 @@
 
 
     <mappers>
+
+        <!--  package指定dao接口所在包，mapper中可以不需要写全限定类名，就不用写resource和class了       -->
+        <package name="com.annoDemo.dao" />
+
         <!--  mybatis注解模式   -->
-        <mapper class="com.annoDemo.dao.IUserDao" />
+<!--        <mapper class="com.annoDemo.dao.IUserDao" />-->
 
         <!--  mybatis mapper xml配置模式  -->
         <!--   坑：使用mapper的xml配置查询语句，文件路径记得是/间隔     -->
-        <mapper resource="com/annoDemo/dao/IAccountDao.xml"/>
+<!--        <mapper resource="com/annoDemo/dao/IAccountDao.xml"/>-->
     </mappers>
 
 

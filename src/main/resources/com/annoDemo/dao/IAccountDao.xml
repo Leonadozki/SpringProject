@@ -6,7 +6,22 @@
 <!-- 配置对应dao接口 -->
 <mapper namespace="com.annoDemo.dao.IAccountDao">
 
-    <select id="listAccounts" resultType="com.annoDemo.domain.Account" >
-        select * from account;
+    <resultMap id="accountUserMap" type="account">
+        <id property="id" column="aid" />
+        <result property="uid" column="uid" />
+        <result property="money" column="money" />
+
+        <!--   基于从表外键的  一对一映射       -->
+        <association property="user" column="uid" javaType="user">
+            <id property="id" column="id" />
+            <result property="username" column="username" />
+            <result property="birthday" column="birthday" />
+            <result property="sex" column="sex" />
+            <result property="address" column="address"/>
+        </association>
+    </resultMap>
+
+    <select id="listAccounts" resultMap="accountUserMap" >
+        select a.id as aid,a.uid,a.money,u.* from account a ,user u where a.uid = u.id;
     </select>
 </mapper>

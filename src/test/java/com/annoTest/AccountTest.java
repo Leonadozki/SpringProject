@@ -37,10 +37,12 @@ public class AccountTest {
     }
 
     @Test
-    public void testListAccounts(){
+    public void testListAccounts() {
         List<Account> accounts = accountDao.listAccounts();
         for (Account account:accounts){
+            System.out.println("------------------");
             System.out.println(account);
+            System.out.println(account.getUser());
         }
     }
 }
