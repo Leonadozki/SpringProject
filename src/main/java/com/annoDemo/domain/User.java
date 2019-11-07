@@ -18,6 +18,17 @@ public class User {
         return accounts;
     }
 
+    // 多对多Role实体映射，包含实体集合引用
+    private List<Role> roles;
+
+    public List<Role> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(List<Role> roles) {
+        this.roles = roles;
+    }
+
     public void setAccounts(List<Account> accounts) {
         this.accounts = accounts;
     }

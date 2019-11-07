@@ -21,6 +21,11 @@ public interface IUserDao {
     List<User> listAll();
 
     /**
+     * @return 查询所有用户，并查出所有对应权限
+     */
+    List<User> listUserRole();
+
+    /**
      *  保存用户方法
      * */
     @Insert("insert into user(username,birthday,sex,address) values(#{username},#{birthday},#{sex},#{address})")

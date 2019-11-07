@@ -6,6 +6,7 @@
 <!-- 配置对应dao接口 -->
 <mapper namespace="com.annoDemo.dao.IUserDao">
 
+    <!--   user-account映射   -->
     <resultMap id="userAccountsMap" type="user">
         <id property="id" column="id" />
         <result property="username" column="username" />
@@ -19,10 +20,30 @@
             <result property="uid" column="uid" />
             <result property="money" column="money" />
         </collection>
+    </resultMap>
 
+    <!--   user-role映射   -->
+    <resultMap id="userRoleMap" type="user">
+        <id property="id" column="id" />
+        <result property="username" column="username" />
+        <result property="sex" column="sex" />
+        <result property="birthday" column="birthday" />
+        <result property="address" column="address" />
+        <!--  从表集合数据映射      -->
+        <collection property="roles" ofType="role">
+            <id property="id" column="rid" />
+            <result property="roleName" column="ROLE_NAME" />
+            <result property="roleDesc" column="ROLE_DESC" />
+        </collection>
     </resultMap>
 
     <select id="listAll" resultMap="userAccountsMap" >
         select *,a.id as aid from user u left join account a on u.id = a.uid;
+    </select>
+
+    <select id="listUserRole" resultMap="userRoleMap">
+        select   u.*,r.id as rid, r.ROLE_NAME, r.ROLE_DESC from  user u
+        left join user_role ur on ur.uid = u.id
+        left join role r on r.id = ur.rid;
     </select>
 </mapper>

@@ -1,8 +1,8 @@
 package com.annoTest;
 
-import com.annoDemo.dao.IAccountDao;
+import com.annoDemo.dao.IRoleDao;
 import com.annoDemo.dao.IUserDao;
-import com.annoDemo.domain.Account;
+import com.annoDemo.domain.Role;
 import com.annoDemo.domain.User;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
@@ -16,11 +16,11 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
 
-public class AccountTest {
+public class RoleTest {
 
-    private SqlSession session;
     private InputStream in;
-    private IAccountDao accountDao;
+    private SqlSession session;
+    private IRoleDao roleDao;
     private IUserDao userDao;
 
     @Before
@@ -29,9 +29,8 @@ public class AccountTest {
         SqlSessionFactoryBuilder builder = new SqlSessionFactoryBuilder();
         SqlSessionFactory factory = builder.build(in);
         session = factory.openSession();
-        accountDao = session.getMapper(IAccountDao.class);
+        roleDao = session.getMapper(IRoleDao.class);
         userDao = session.getMapper(IUserDao.class);
-
     }
 
     @After
@@ -41,29 +40,28 @@ public class AccountTest {
     }
 
     /**
-     *  一对一数据查询操作
+     *  返回role表所有数据
      */
     @Test
-    public void testListAccounts() {
-        List<Account> accounts = accountDao.listAccounts();
-        for (Account account:accounts){
-            System.out.println("---------------");
-            System.out.println(account);
-            System.out.println(account.getUser());
+    public void testListRoles(){
+        List<Role> roles = roleDao.listRoles();
+        for (Role role : roles){
+            System.out.println("-------------");
+            System.out.println(role);
+            System.out.println(role.getUsers());
         }
     }
 
     /**
-     *  用户--账户一对多查询操作
+     *  用户--权限多对多查询
      */
     @Test
-    public void testListUserAccounts(){
-        List<User> users = userDao.listAll();
-        for (User user:users){
-            System.out.println("----------------");
+    public void testListUserRoles(){
+        List<User> users = userDao.listUserRole();
+        for (User user : users){
+            System.out.println("-------------");
             System.out.println(user);
-            System.out.println(user.getAccounts());
+            System.out.println(user.getRoles());
         }
     }
-
 }

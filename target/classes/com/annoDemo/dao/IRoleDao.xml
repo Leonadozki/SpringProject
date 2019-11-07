@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 配置对应dao接口 -->
+<mapper namespace="com.annoDemo.dao.IRoleDao">
+
+    <resultMap id="roleUserMap" type="role">
+        <id property="id" column="rid" />
+        <result property="roleName" column="ROLE_NAME" />
+        <result property="roleDesc" column="ROLE_DESC" />
+
+        <!--   多对多映射，返回user集合引用      -->
+        <!--   坑：每次property都记得取对象名，这里是users     -->
+        <collection property="users" ofType="user">
+            <id property="id" column="id" />
+            <result property="username" column="username" />
+            <result property="birthday" column="birthday" />
+            <result property="sex" column="sex" />
+            <result property="address" column="address" />
+        </collection>
+    </resultMap>
+
+    <!-- 查询sql通过中间表关联两表   -->
+    <select id="listRoles" resultMap="roleUserMap">
+        select r.id as rid, r.ROLE_NAME, r.ROLE_DESC, u.* from role r
+        left join user_role ur on r.id = ur.rid
+        left join user u on ur.uid = u.id;
+    </select>
+</mapper>
