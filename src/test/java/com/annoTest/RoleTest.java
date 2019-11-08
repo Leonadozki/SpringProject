@@ -53,7 +53,7 @@ public class RoleTest {
     }
 
     /**
-     *  用户--权限多对多查询
+     *  用户--权限多对多查询，延迟加载改造
      */
     @Test
     public void testListUserRoles(){

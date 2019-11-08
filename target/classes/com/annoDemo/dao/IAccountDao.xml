@@ -24,4 +24,9 @@
     <select id="listAccounts" resultMap="accountUserMap" >
         select a.id as aid,a.uid,a.money,u.* from account a ,user u where a.uid = u.id;
     </select>
+
+    <!-- 根据用户ID查询账户列表   -->
+    <select id="listAccountByUid" resultType="account" >
+        select * from account  where uid = #{uid};
+    </select>
 </mapper>

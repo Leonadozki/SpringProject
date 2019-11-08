@@ -15,7 +15,7 @@ import java.util.List;
 public interface IUserDao {
 
     /**
-     *  查询所有用户, 并且查出所有对应账户
+     *  查询所有用户, 并且查出所有对应账户，延迟加载
      * */
 //    @Select("select * from user")
     List<User> listAll();

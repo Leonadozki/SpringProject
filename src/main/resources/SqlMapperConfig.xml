@@ -10,6 +10,11 @@
     <!-- 从外部配置文件读连接信息   -->
     <properties resource="JdbcConfig.properties"></properties>
 
+    <!-- 开启延迟加载   -->
+    <settings>
+        <setting name="lazyLoadingEnabled" value="true"/>
+    </settings>
+
     <!-- 配置别名    -->
     <typeAliases>
         <!--   配置实体类的别名，mapper内可以不写实体类全类型，别名默认为类名      -->

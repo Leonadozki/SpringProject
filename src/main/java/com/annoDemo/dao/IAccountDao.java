@@ -13,4 +13,10 @@ public interface IAccountDao {
      * @return 返回所有账户
      */
     List<Account> listAccounts();
+
+    /**
+     * @param uid 根据用户ID查询账户
+     * @return
+     */
+    List<Account> listAccountByUid(Integer uid);
 }

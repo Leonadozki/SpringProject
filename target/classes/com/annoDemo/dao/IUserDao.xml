@@ -13,13 +13,9 @@
         <result property="sex" column="sex" />
         <result property="birthday" column="birthday" />
         <result property="address" column="address" />
-        <!--  从表集合数据映射      -->
-        <collection property="accounts" ofType="account">
-            <!--    展示的id不能重复，起了个别名        -->
-            <id property="id" column="aid" />
-            <result property="uid" column="uid" />
-            <result property="money" column="money" />
-        </collection>
+
+        <!--  延迟加载account，通过延迟加载getByUid  -->
+        <collection property="accounts" ofType="account" select="com.annoDemo.dao.IAccountDao.listAccountByUid" column="id" />
     </resultMap>
 
     <!--   user-role映射   -->
@@ -37,8 +33,9 @@
         </collection>
     </resultMap>
 
+    <!--  延迟加载account  -->
     <select id="listAll" resultMap="userAccountsMap" >
-        select *,a.id as aid from user u left join account a on u.id = a.uid;
+        select * from user ;
     </select>
 
     <select id="listUserRole" resultMap="userRoleMap">
