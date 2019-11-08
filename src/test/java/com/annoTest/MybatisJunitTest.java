@@ -164,4 +164,16 @@ public class MybatisJunitTest {
         }
     }
 
+    /**
+     *  mybatis一级缓存测试
+     */
+    @Test
+    public void testCache(){
+        QueryVo vo = new QueryVo();
+        List<User> users0 = userDao.listUserByVo(vo);
+        List<User> users1 = userDao.listUserByVo(vo);
+        // 查询结果对象内存地址相同，说明复用了一级缓存
+        System.out.println(users0 == users1);
+    }
+
 }

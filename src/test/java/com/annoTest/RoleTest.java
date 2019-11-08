@@ -61,7 +61,7 @@ public class RoleTest {
         for (User user : users){
             System.out.println("-------------");
             System.out.println(user);
-            System.out.println(user.getRoles());
+//            System.out.println(user.getRoles());
         }
     }
 }
