@@ -1,21 +1,18 @@
 package com.annoDemo.domain;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
  *  角色实体类
  */
-public class Role {
+public class Role implements Serializable {
 
     private Integer id;
 
     private String roleName;
 
     private String roleDesc;
-
-    public Integer getId() {
-        return id;
-    }
 
     // 多对多实体映射，返回user实体集合引用
     private List<User> users;
@@ -26,6 +23,10 @@ public class Role {
 
     public void setUsers(List<User> users) {
         this.users = users;
+    }
+
+    public Integer getId() {
+        return id;
     }
 
     public void setId(Integer id) {

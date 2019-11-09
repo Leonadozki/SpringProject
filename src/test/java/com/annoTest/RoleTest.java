@@ -20,6 +20,7 @@ public class RoleTest {
 
     private InputStream in;
     private SqlSession session;
+    SqlSessionFactory factory;
     private IRoleDao roleDao;
     private IUserDao userDao;
 
@@ -27,7 +28,7 @@ public class RoleTest {
     public void init() throws IOException {
         in = Resources.getResourceAsStream("SqlMapperConfig.xml");
         SqlSessionFactoryBuilder builder = new SqlSessionFactoryBuilder();
-        SqlSessionFactory factory = builder.build(in);
+        factory = builder.build(in);
         session = factory.openSession();
         roleDao = session.getMapper(IRoleDao.class);
         userDao = session.getMapper(IUserDao.class);
@@ -63,5 +64,27 @@ public class RoleTest {
             System.out.println(user);
 //            System.out.println(user.getRoles());
         }
+    }
+
+    /**
+     *  测试二级缓存
+     *  注：开启后，二级缓存还会将对象写到硬盘（IO操作）在需要时读取到内存使用，
+     *  因此实体类Role要实现序列化接口（否则会报未序列化异常）
+     */
+    @Test
+    public void testSecondLevelCache(){
+        SqlSession session1 = factory.openSession();
+        IRoleDao roleDao1 = session1.getMapper(IRoleDao.class);
+        List<Role> roles1 = roleDao1.listRoles();
+        System.out.println(roles1);
+        // 一级缓存消失
+        session1.close();
+
+        SqlSession session2 = factory.openSession();
+        IRoleDao roleDao2 = session2.getMapper(IRoleDao.class);
+        List<Role> roles2 = roleDao2.listRoles();
+        System.out.println(roles2);
+
+        System.out.println(roles1 == roles2);
     }
 }

@@ -6,6 +6,9 @@
 <!-- 配置对应dao接口 -->
 <mapper namespace="com.annoDemo.dao.IRoleDao">
 
+    <!-- 启用二级缓存   -->
+    <cache />
+
     <resultMap id="roleUserMap" type="role">
         <id property="id" column="rid" />
         <result property="roleName" column="ROLE_NAME" />
@@ -22,8 +25,8 @@
         </collection>
     </resultMap>
 
-    <!-- 查询sql通过中间表关联两表   -->
-    <select id="listRoles" resultMap="roleUserMap">
+    <!-- 查询sql通过中间表关联两表，useCache启用二级缓存   -->
+    <select id="listRoles" resultMap="roleUserMap" useCache="true">
         select r.id as rid, r.ROLE_NAME, r.ROLE_DESC, u.* from role r
         left join user_role ur on r.id = ur.rid
         left join user u on ur.uid = u.id;
