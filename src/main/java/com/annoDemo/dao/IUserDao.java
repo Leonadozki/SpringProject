@@ -3,6 +3,7 @@ package com.annoDemo.dao;
 import com.annoDemo.domain.QueryVo;
 import com.annoDemo.domain.User;
 import org.apache.ibatis.annotations.*;
+import org.apache.ibatis.mapping.FetchType;
 
 import java.util.List;
 
@@ -12,7 +13,7 @@ import java.util.List;
 public interface IUserDao {
 
     /**
-     *  查询所有用户, 并且查出所有对应账户，延迟加载
+     *  查询所有用户, 并且查出所有对应账户，延迟加载（XML方式实现）
      * */
     List<User> listAll();
 
@@ -51,6 +52,7 @@ public interface IUserDao {
 
     /**
      *  查询单个用户
+     *  注：类属性与db列名不一致情况
      */
     @Select("select * from user where id=#{id}")
     @Results(value={
@@ -61,6 +63,19 @@ public interface IUserDao {
             @Result(property = "gender", column = "sex")
     })
     User getById(Integer id);
+
+    /**
+     * @return 返回所有用户及所有用户对应账户
+     */
+    @Select("select * from user")
+    @Results(value = {
+            @Result(id = true, property = "id", column = "id"),
+            @Result(property = "gender", column = "sex"),
+            @Result(property = "accounts", column = "id",
+                    many = @Many(select = "com.annoDemo.dao.IAccountDao.listAccountsByUid",
+                            fetchType = FetchType.LAZY))
+    })
+    List<User> listAllUserAccount();
 
     /**
      * @return 所有user记录个数

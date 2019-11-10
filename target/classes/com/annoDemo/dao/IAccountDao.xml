@@ -25,8 +25,12 @@
         select a.id as aid,a.uid,a.money,u.* from account a ,user u where a.uid = u.id;
     </select>
 
-    <!-- 根据用户ID查询账户   -->
-    <select id="getAccountByUid" resultType="account" >
-        select * from account  where uid = #{uid};
-    </select>
+
+
+<!--    &lt;!&ndash; 根据用户ID查询账户   &ndash;&gt;-->
+<!--    <select id="getAccountByUid" resultType="account" >-->
+<!--        select * from account  where uid = #{uid};-->
+<!--    </select>-->
+
+
 </mapper>

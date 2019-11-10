@@ -64,7 +64,7 @@ public class MybatisAnnoTest {
     }
 
     /**
-     *  注解查询（一对一）
+     *  注解查询账户-用户信息（一对一）
      */
     @Test
     public void testAnnotationListAccountMap(){
@@ -73,6 +73,19 @@ public class MybatisAnnoTest {
             System.out.println("---------------");
             System.out.println(account);
             System.out.println(account.getUser());
+        }
+    }
+
+    /**
+     *  查询用户及其所有对应账户
+     */
+    @Test
+    public void testAnnotationListUserMap(){
+        List<User> users = userDao.listAllUserAccount();
+        for (User user: users){
+            System.out.println("--------------");
+            System.out.println(user);
+            System.out.println(user.getAccounts());
         }
     }
 

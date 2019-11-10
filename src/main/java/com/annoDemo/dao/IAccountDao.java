@@ -28,4 +28,10 @@ public interface IAccountDao {
                     one = @One(select = "com.annoDemo.dao.IUserDao.getById"))
     })
     List<Account> listAccountUser();
+
+    /**
+     * @return 通过用户id查询，返回所有账户
+     */
+    @Select("select * from account where uid=#{id}")
+    List<Account> listAccountsByUid();
 }
