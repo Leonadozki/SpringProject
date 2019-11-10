@@ -9,7 +9,7 @@ public class User implements Serializable {
     private Integer id;
     private String username;
     private Date birthday;
-    private String sex;
+    private String gender;
     private String address;
 
     // 一对多实体映射，主表实体包含从表实体的集合引用
@@ -58,12 +58,12 @@ public class User implements Serializable {
         this.birthday = birthday;
     }
 
-    public String getSex() {
-        return sex;
+    public String getGender() {
+        return gender;
     }
 
-    public void setSex(String sex) {
-        this.sex = sex;
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 
     public String getAddress() {
@@ -80,7 +80,7 @@ public class User implements Serializable {
                 "id=" + id +
                 ", username='" + username + '\'' +
                 ", birthday=" + birthday +
-                ", sex='" + sex + '\'' +
+                ", gender='" + gender + '\'' +
                 ", address='" + address + '\'' +
                 '}';
     }

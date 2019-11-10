@@ -1,6 +1,10 @@
 package com.annoDemo.dao;
 
 import com.annoDemo.domain.Account;
+import org.apache.ibatis.annotations.One;
+import org.apache.ibatis.annotations.Result;
+import org.apache.ibatis.annotations.Results;
+import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
 
@@ -15,8 +19,13 @@ public interface IAccountDao {
     List<Account> listAccounts();
 
     /**
-     * @param uid 根据用户ID查询账户
-     * @return
+     * @param
+     * @return 返回所有account以及对应的user（一对一）
      */
-    List<Account> listAccountByUid(Integer uid);
+    @Select("select * from account")
+    @Results(id = "AccountUserMap", value = {
+            @Result(property = "user", column = "uid",
+                    one = @One(select = "com.annoDemo.dao.IUserDao.getById"))
+    })
+    List<Account> listAccountUser();
 }

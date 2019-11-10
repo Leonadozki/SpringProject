@@ -59,7 +59,7 @@ public class MybatisJunitTest {
 
         User user = new User();
         user.setUsername("leo");
-        user.setSex("男");
+        user.setGender("男");
         user.setBirthday(new Date());
         user.setAddress("南岸区弹子石");
         userDao.saveUser(user);
@@ -91,7 +91,7 @@ public class MybatisJunitTest {
         User user = new User();
         user.setId(41);
         user.setUsername("老王改");
-        user.setSex("女");
+        user.setGender("女");
         user.setBirthday(new Date());
         user.setAddress("南岸区弹子石2");
         userDao.updateUser(user);
